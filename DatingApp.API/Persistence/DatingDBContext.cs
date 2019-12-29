@@ -3,10 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DatingApp.API.Persistence
 {
-    public class DatingDBContext : DbContext
+    public class DatingDbContext : DbContext
     {
-        public DatingDBContext(DbContextOptions<DatingDBContext> options) : base(options) { }
+        public DatingDbContext(DbContextOptions<DatingDbContext> options) : base(options) { }
 
         public DbSet<Value> Values { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
     }
 }
